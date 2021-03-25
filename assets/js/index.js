@@ -1,19 +1,13 @@
-let global1 = 5; 
-let global2 = 5;
+let a = +prompt('num1');
+let b = +prompt('num2');
 
-console.log(test('qwerty')); // после вывода перезапишится переменная на 7
-console.log(det('first', global2)); // перезаписи не будет.
-
-console.log(test('ytrewq')); // после вывода перезапишится переменная на 9
-console.log(det('second', global2)); // перезаписи не будет.
-
-
-function test(msg) {
-    const res = global1 += 2;
-    return res + msg;
+function sum(a, b) {
+    return a + b;
 }
-
-function det(msg, local) {
-    const res = local += 2;
-    return res + msg;
+function zero(a, b, hightFunc) { // функия с агрументоми а и б и hightFunc
+    const results = hightFunc(a, b); //  создаем переменную где higth содержит два парамента а и б
+    return results; // выводит результат переменной
 }
+console.log(zero(a, b, sum));
+
+// аналогия с щупальцами sum переходит в hightFunc > zero вызывает в консольлоге hightFunc как функцитю sum (как параметр или нет я хз)
